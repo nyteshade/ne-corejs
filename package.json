@@ -49,7 +49,7 @@
     "test": "jest"
   },
   "type": "module",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "dependencies": {
     "@nyteshade/ne-pubsub": "^2.1.2",
     "@nyteshade/ne-reflection": "^2.2.0"
