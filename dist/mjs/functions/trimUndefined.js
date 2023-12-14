@@ -1,4 +1,4 @@
-import { formatEntries, keysToDescriptorEntries } from "./reducers";
+import { formatEntries, keysToDescriptorEntries } from "./reducers/index.js";
 export function trimUndefined(value) {
     const isClass = String(value?.constructor ?? "").includes('class');
     const isArray = Array.isArray(value);

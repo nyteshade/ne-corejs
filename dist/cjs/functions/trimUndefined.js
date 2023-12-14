@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.trimUndefined = void 0;
-const reducers_1 = require("./reducers");
+const index_js_1 = require("./reducers/index.js");
 function trimUndefined(value) {
     const isClass = String(value?.constructor ?? "").includes('class');
     const isArray = Array.isArray(value);
@@ -13,11 +13,11 @@ function trimUndefined(value) {
     }
     if (!isObject)
         return value;
-    let descs = Reflect.ownKeys(value).reduce(...(0, reducers_1.keysToDescriptorEntries)(value));
+    let descs = Reflect.ownKeys(value).reduce(...(0, index_js_1.keysToDescriptorEntries)(value));
     if (isClass) {
         const prototype = value.constructor.prototype ?? {};
         descs = descs.concat(Reflect.ownKeys(prototype)
-            .reduce(...(0, reducers_1.keysToDescriptorEntries)(value)));
+            .reduce(...(0, index_js_1.keysToDescriptorEntries)(value)));
     }
     descs = descs.filter(([key, descriptor]) => {
         if (Reflect.has(descriptor, 'value') && descriptor.value === undefined)
@@ -29,7 +29,7 @@ function trimUndefined(value) {
         }
         return true;
     });
-    const descriptors = descs.reduce(...(0, reducers_1.formatEntries)());
+    const descriptors = descs.reduce(...(0, index_js_1.formatEntries)());
     const result = Object.create(Object.getPrototypeOf(value));
     return Object.defineProperties(result, descriptors);
 }
