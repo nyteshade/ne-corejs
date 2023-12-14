@@ -35,7 +35,7 @@
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
-  "name": "@nyteshade/ne-core-js",
+  "name": "@nyteshade/ne-corejs",
   "scripts": {
     "build": "bin/build",
     "test": "jest"
