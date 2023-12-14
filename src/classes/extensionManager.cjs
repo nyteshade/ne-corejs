@@ -1,5 +1,5 @@
 import { GetProxy } from '@nyteshade/ne-reflection'
-import { Singleton } from './singleton.js'
+import { Singleton } from './singleton.cjs'
 
 /**
  * The ExtensionManager class is responsible for registering and managing

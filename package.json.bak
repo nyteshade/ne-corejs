@@ -2,7 +2,6 @@
   "author": "Brielle Harrison <nyteshade at gmail.com>",
   "description": "",
   "devDependencies": {
-    "@babel/preset-env": "^7.23.6",
     "@jest/expect": "^29.7.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
@@ -21,8 +20,8 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/bundle.esm.cjs",
-      "require": "./dist/bundle.cjs"
+      "import": "./dist/mjs/index.cjs",
+      "require": "./dist/cjs/index.js"
     }
   },
   "jest": {
@@ -40,12 +39,11 @@
     "localStorage"
   ],
   "license": "MIT",
-  "main": "dist/bundle.cjs",
-  "module": "dist/bundle.esm.js",
-  "browser": "dist/bundle.min.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
   "name": "@nyteshade/ne-corejs",
   "scripts": {
-    "build": "rm -rf dist/* && rollup -c",
+    "build": "bin/build",
     "test": "jest"
   },
   "type": "module",

@@ -1,4 +1,4 @@
-const { Hasher } = require('..')
+const { classes: { Hasher } } = require('..')
 
 describe('Hasher', () => {
   let kEmptyHash

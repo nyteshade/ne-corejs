@@ -1,6 +1,6 @@
-import { Singleton } from './singleton.js'
-import { ESLintMetaType } from '../enums/eslintMetaType.js'
-import { keysToDescriptors } from '../functions/reducers.js'
+import { Singleton } from './singleton.cjs'
+import { ESLintMetaType } from '../enums/eslintMetaType.cjs'
+import { keysToDescriptors } from '../functions/reducers.cjs'
 
 export class BabelPlugin extends Singleton {
   babel() { return { } }

@@ -1,5 +1,5 @@
 import { GetProxy } from '@nyteshade/ne-reflection'
-import { Hasher } from './hasher.js'
+import { Hasher } from './hasher.cjs'
 
 /* The `Extension` class is a JavaScript class that allows you to extend or modify
 properties of an object and track changes to its state. */
