@@ -87,10 +87,13 @@ web_modules/
 .next
 out
 
+<<<<<<< HEAD
 # Nuxt.js build / generate output
 .nuxt
 dist
 
+=======
+>>>>>>> 6f73f24 (Initial commit)
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
