@@ -1,3 +1,8 @@
+import { Patch, Extension } from '@nejs/extension'
+import { enableAll } from '@nejs/basic-extensions'
+
+enableAll()
+
 import {
   Errors,
   PubSub,
@@ -27,18 +32,17 @@ import {
   isPrimitive,
 } from '@nyteshade/ne-reflection'
 
-import { Hasher } from './classes/hasher.cjs'
-import { Extension } from './classes/extension.cjs'
-import { ExtensionManager } from './classes/extensionManager.cjs'
-import { Singleton } from './classes/singleton.cjs'
+import { Hasher } from './classes/hasher.js'
+import { Singleton } from './classes/singleton.js'
+import { SemVer } from './classes/semver.js'
 
 import {
   formatEntries,
   keysToDescriptorEntries,
   keysToDescriptors
-} from './functions/reducers/index.cjs'
+} from './functions/reducers/index.js'
 
-import { trimUndefined } from './functions/trimUndefined.cjs'
+import { trimUndefined } from './functions/trimUndefined.js'
 
 // Namespacing...
 
@@ -46,13 +50,14 @@ const classes = {
   Descriptor,
   Errors,
   Extension,
-  ExtensionManager,
   GetProxy,
   Hasher,
   Logs,
+  Patch,
   ProxyMeta,
   PubSub,
   Singleton,
+  SemVer,
 }
 
 const functions = {

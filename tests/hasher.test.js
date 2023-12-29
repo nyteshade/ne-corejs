@@ -1,4 +1,4 @@
-const { classes: { Hasher } } = require('..')
+const { classes: { Hasher } } = require('../dist/cjs/index.js')
 
 describe('Hasher', () => {
   let kEmptyHash
