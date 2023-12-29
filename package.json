@@ -20,9 +20,6 @@
       "require": "./dist/mjs/index.js"
     }
   },
-  "files": [
-    "dist"
-  ],
   "iifeGlobalName": "",
   "jest": {
     "verbose": true
